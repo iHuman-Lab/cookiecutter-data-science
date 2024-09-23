@@ -28,4 +28,4 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/iHuman-Lab/ihuman-cookiecutter-data-science.git
+    cookiecutter https://github.com/iHuman-Lab/cookiecutter-data-science.git
