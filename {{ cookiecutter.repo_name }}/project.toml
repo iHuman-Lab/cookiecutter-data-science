@@ -32,10 +32,6 @@ dev = [
     "mypy"
 ]
 
-[project.urls]
-Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
-Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues"
-
 [tool.setuptools]
 packages = ["src"]
 package-dir = {"" = "src"}
@@ -45,17 +41,6 @@ package-dir = {"" = "src"}
 select = ["E", "F", "N"]  # E: pycodestyle, F: pyflakes, N: pep8-naming
 line-length = 88
 target-version = "py38"
-
-# Black: Code formatting
-[tool.black]
-line-length = 88
-target-version = ['py38']
-
-# isort: Import sorting
-[tool.isort]
-profile = "black"
-line_length = 88
-src_paths = ["src", "tests"]
 
 # pytest
 [tool.pytest.ini_options]
