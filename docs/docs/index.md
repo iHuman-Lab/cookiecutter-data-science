@@ -210,7 +210,7 @@ other_variable = os.environ.get("OTHER_VARIABLE")
 ```
 
 #### AWS CLI configuration
-When using Amazon S3 to store data, a simple method of managing AWS access is to set your access keys to environment variables. However, managing mutiple sets of keys on a single machine (e.g. when working on multiple projects) it is best to use a [credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html), typically located in `~/.aws/credentials`. A typical file might look like:
+When using Amazon S3 to store data, a simple method of managing AWS access is to set your access keys to environment variables. However, managing multiple sets of keys on a single machine (e.g. when working on multiple projects) it is best to use a [credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-config-files.html), typically located in `~/.aws/credentials`. A typical file might look like:
 ```
 [default]
 aws_access_key_id=myaccesskey

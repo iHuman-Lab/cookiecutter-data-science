@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
 
+# ruff: noqa
 setup(
     name='src',
     packages=find_packages(),
