@@ -4,14 +4,13 @@ import subprocess
 
 
 def main():
+    if not os.path.exists(".git"):
+        print("🔧 Initializing Git repository...")
+        subprocess.run(["git", "init", "--initial-branch=main"], check=True)
+
     git_hooks_dir = os.path.join(".git", "hooks")
-    githooks_src_dir = os.path.join(".githooks")
+    githooks_src_dir = ".githooks"
 
-    if not os.path.isdir(git_hooks_dir):
-        print("Warning: .git/hooks directory not found. Are you inside a git repo?")
-        return
-
-    # Copy pre-commit and pre-push hooks
     for hook in ["pre-commit", "pre-push"]:
         src = os.path.join(githooks_src_dir, hook)
         dst = os.path.join(git_hooks_dir, hook)
@@ -19,17 +18,16 @@ def main():
         if os.path.exists(src):
             shutil.copy(src, dst)
             os.chmod(dst, 0o755)
-            print(f"Copied {hook} hook to .git/hooks")
+            print(f"✅ Copied {hook} to .git/hooks")
         else:
-            print(f"Hook {hook} not found in .githooks")
+            print(f"⚠️  {hook} not found in .githooks")
 
-    # Install pre-commit package and hooks
     try:
         subprocess.run(["pip", "install", "--upgrade", "pre-commit"], check=True)
         subprocess.run(["pre-commit", "install", "--install-hooks"], check=True)
-        print("pre-commit installed and hooks configured.")
+        print("✅ pre-commit installed and hooks configured.")
     except Exception as e:
-        print(f"Failed to install pre-commit or hooks: {e}")
+        print(f"❌ Failed to install pre-commit or hooks: {e}")
 
 
 if __name__ == "__main__":
