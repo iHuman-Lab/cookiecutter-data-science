@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "{{ cookiecutter.repo_name }}"
 version = "0.1.0"
-description = "{{ cookiecutter.project_short_description }}"
+description = "{{ cookiecutter.description }}"
 authors = [
     { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.email }}" }
 ]
