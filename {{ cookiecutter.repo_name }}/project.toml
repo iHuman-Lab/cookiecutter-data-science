@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "{{ cookiecutter.project_slug }}"
+name = "{{ cookiecutter.repo_name }}"
 version = "0.1.0"
 description = "{{ cookiecutter.project_short_description }}"
 authors = [
@@ -36,8 +36,8 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
-Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues"
+Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues"
 
 [tool.setuptools]
 packages = ["src"]

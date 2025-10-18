@@ -37,8 +37,8 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git
-cd {{ cookiecutter.project_slug }}
+git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+cd {{ cookiecutter.repo_name }}
 ```
 
 ### 2. Always use a conda virtual environment
